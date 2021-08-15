@@ -1,4 +1,4 @@
-package com.sam09.lib.datastructurestarter.services.LinkedLists;
+package com.sam09.lib.datastructurestarter.services.lists;
 
 import org.junit.Before;
 import org.junit.Test;

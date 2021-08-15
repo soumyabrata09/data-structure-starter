@@ -1,3 +1,4 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration= \
-com.sam09.lib.datastructurestarter.configurations.LinkedListAutoConfiguration
+com.sam09.lib.datastructurestarter.configurations.LinkedListAutoConfiguration, \
+com.sam09.lib.datastructurestarter.configurations.StackAutoConfiguration
