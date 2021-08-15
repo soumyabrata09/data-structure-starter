@@ -1,7 +1,7 @@
 /*
 package com.sam09.lib.datastructurestarter;
 
-import com.sam09.lib.datastructurestarter.services.SinglyList;
+import com.sam09.lib.datastructurestarter.services.LinkedLists.SinglyList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.sam09.lib.datastructurestarter;
+package com.sam09.lib.datastructurestarter.constants;
 
 public enum ErrorConst {
     OUT_OF_BOUND("INDEX OUT OF BOUND"),

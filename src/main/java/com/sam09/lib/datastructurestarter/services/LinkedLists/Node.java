@@ -1,4 +1,4 @@
-package com.sam09.lib.datastructurestarter.services;
+package com.sam09.lib.datastructurestarter.services.LinkedLists;
 
 public class Node {
     private Object data;

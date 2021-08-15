@@ -1,4 +1,4 @@
-package com.sam09.lib.datastructurestarter.services;
+package com.sam09.lib.datastructurestarter.services.LinkedLists;
 
 import java.util.List;
 
@@ -9,5 +9,6 @@ public interface SinglyList {
     Node removeAt(int index) throws Exception;
     List traverse();
     int sizeOf();
+    Node getHead();
     //void rotate(int index) throws Exception;
 }
