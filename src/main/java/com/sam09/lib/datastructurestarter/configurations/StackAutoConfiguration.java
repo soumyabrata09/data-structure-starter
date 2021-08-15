@@ -1,9 +1,8 @@
 package com.sam09.lib.datastructurestarter.configurations;
 
-import com.sam09.lib.datastructurestarter.services.lists.DoublyLinkedList;
-import com.sam09.lib.datastructurestarter.services.lists.DoublyList;
-import com.sam09.lib.datastructurestarter.services.lists.SinglyLinkedList;
-import com.sam09.lib.datastructurestarter.services.lists.SinglyList;
+import com.sam09.lib.datastructurestarter.services.stack.Stack;
+import com.sam09.lib.datastructurestarter.services.stack.StackService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -13,19 +12,18 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration(proxyBeanMethods = true)
 @ConditionalOnClass
-public class LinkedListAutoConfiguration {
+public class StackAutoConfiguration {
 
-    @Bean(name = "singlyList")
+    @Bean(name = "sizeBean")
     @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-    @ConditionalOnMissingBean
-    public SinglyList singlyLinkedListBean(){
-        return new SinglyLinkedList();
+    public int getSize(@Value("${ds.stack.size:50}") int size) {
+      return size;
     }
 
-    @Bean(name = "doublyList")
+    @Bean(name = "stackBean")
     @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
     @ConditionalOnMissingBean
-    public DoublyList doublyLinkedListBean(){
-        return new DoublyLinkedList();
+    public Stack stackBean(int getSize) {
+        return new StackService(getSize);
     }
 }

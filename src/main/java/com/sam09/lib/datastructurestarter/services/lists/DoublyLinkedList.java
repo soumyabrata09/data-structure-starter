@@ -1,4 +1,4 @@
-package com.sam09.lib.datastructurestarter.services.LinkedLists;
+package com.sam09.lib.datastructurestarter.services.lists;
 
 import com.sam09.lib.datastructurestarter.constants.ErrorConst;
 import com.sam09.lib.datastructurestarter.constants.Traversal;
