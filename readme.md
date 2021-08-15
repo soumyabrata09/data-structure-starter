@@ -52,7 +52,7 @@ _Action Items_
  - [x] Create a Generic SLF4J logger which can be inject to gereric bean generator and can be used across the project 
  - [x] Onboard the artifact onto Jfrog/Nexus
  - [x] Singly Linked List implemented
- - [ ] Doubly Linked List
+ - [x] Doubly Linked List
  - [ ] stack, Queue and Priority Queue
  - [ ] Binary Search Tree
  - [ ] Heap

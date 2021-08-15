@@ -1,4 +1,4 @@
-package com.sam09.lib.datastructurestarter.services;
+package com.sam09.lib.datastructurestarter.services.LinkedLists;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -35,38 +35,47 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void prependTest() {
-        linkedList = populateList();
-        log.info(" Linked List: " + linkedList.traverse());
-        assertEquals(3,linkedList.sizeOf());
+        linkedList = populateList(); // by default it will add 3 random node value
+        log.info("List of value before prepending: " + linkedList.traverse());
+        linkedList.prepend(23);
+        log.info(" Linked list value after prepending: " + linkedList.traverse());
+        assertEquals(4,linkedList.sizeOf());
+        log.info("HEAD value: " + linkedList.getHead().getData());
+        assertEquals(23,linkedList.getHead().getData());
     }
 
     @Test
     public void insertAtTestValid() throws Exception {
-        linkedList = populateList();
-        linkedList.insertAt(randomize(),2);
-        log.info(" Linked List: " + linkedList.traverse());
+        int INDEX = 2;
+        linkedList = populateList(); // by default it will add 3 random node value
+        log.info("List of value before inserting node value at " + INDEX + ": " + linkedList.traverse());
+        linkedList.insertAt(randomize(),INDEX);
+        log.info("List of value after inserting node at " + INDEX + ": " + linkedList.traverse());
         assertEquals(4,linkedList.sizeOf());
     }
 
     @Test(expected = Exception.class)
     public void insertAtFirstTestInvalid() throws Exception {
-        linkedList = populateList();
+        linkedList = populateList(); // by default it will add 3 random node value
         linkedList.insertAt(randomize(),6);
     }
 
     @Test
     public void removeFirstTestValid() throws Exception {
-        linkedList = populateList();
+        linkedList = populateList(); // by default it will add 3 random node value
+        log.info("List of value before removing first node: " + linkedList.traverse());
         linkedList.removeFirst();
-        log.info(" Linked List: " + linkedList.traverse());
+        log.info("List of value after removing first node: " + linkedList.traverse());
         assertEquals(2,linkedList.sizeOf());
     }
 
     @Test
     public void removeAtTestValid() throws Exception {
-        linkedList = populateList();
-        linkedList.removeAt(1);
-        log.info(" Linked List: " + linkedList.traverse());
+        int INDEX = 2;
+        linkedList = populateList(); // by default it will add 3 random node value
+        log.info("List of value before removing node at " + INDEX + ": " + linkedList.traverse());
+        linkedList.removeAt(INDEX);
+        log.info(" Linked of value after removing node at " + INDEX + ": " + linkedList.traverse());
         assertEquals(2,linkedList.sizeOf());
     }
 

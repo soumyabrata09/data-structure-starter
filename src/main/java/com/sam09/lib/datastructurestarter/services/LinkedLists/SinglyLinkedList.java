@@ -1,6 +1,6 @@
-package com.sam09.lib.datastructurestarter.services;
+package com.sam09.lib.datastructurestarter.services.LinkedLists;
 
-import com.sam09.lib.datastructurestarter.ErrorConst;
+import com.sam09.lib.datastructurestarter.constants.ErrorConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class SinglyLinkedList implements SinglyList{
+public class SinglyLinkedList implements SinglyList {
     private static final Logger log = LoggerFactory.getLogger(SinglyLinkedList.class);
     private Node HEAD;
     private int size;
@@ -108,6 +108,11 @@ public class SinglyLinkedList implements SinglyList{
     @Override
     public int sizeOf() {
         return this.size;
+    }
+
+    @Override
+    public Node getHead() {
+        return this.HEAD;
     }
 
    /* @Override
