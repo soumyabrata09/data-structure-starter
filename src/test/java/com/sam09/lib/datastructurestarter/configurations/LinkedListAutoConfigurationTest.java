@@ -13,6 +13,7 @@ public class LinkedListAutoConfigurationTest {
 
     AnnotationConfigApplicationContext context;
     String[] Declared_beans = {"singlyList", "doublyList"};
+
     @Before
     public void setUp() throws Exception {
         context = new AnnotationConfigApplicationContext();

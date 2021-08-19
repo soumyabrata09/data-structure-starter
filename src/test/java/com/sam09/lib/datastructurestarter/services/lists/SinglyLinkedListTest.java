@@ -4,15 +4,15 @@ import com.sam09.lib.datastructurestarter.utility.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 
-@RunWith(JUnit4.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 public class SinglyLinkedListTest {
 
     private static final Logger log = LoggerFactory.getLogger(SinglyLinkedListTest.class);
@@ -22,14 +22,6 @@ public class SinglyLinkedListTest {
         linkedList = new SinglyLinkedList();
     }
 
-    /*private SinglyLinkedList populateList(){
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.prepend(randomize());
-        list.prepend(randomize());
-        list.prepend(randomize());
-
-        return list;
-    }*/
     @Test
     public void prependTest() {
         linkedList = TestUtils.populateList(); // by default it will add 3 random node value
@@ -46,7 +38,8 @@ public class SinglyLinkedListTest {
         int INDEX = 2;
         linkedList = TestUtils.populateList(); // by default it will add 3 random node value
         log.info("List of value before inserting node value at " + INDEX + ": " + linkedList.traverse());
-        linkedList.insertAt(TestUtils.randomize(),INDEX);
+        linkedList.insertAt(TestUtils.randomize(
+                TestUtils.DEFAULT_RAND_LENGTH),INDEX);
         log.info("List of value after inserting node at " + INDEX + ": " + linkedList.traverse());
         assertEquals(4,linkedList.sizeOf());
     }
@@ -54,7 +47,8 @@ public class SinglyLinkedListTest {
     @Test(expected = Exception.class)
     public void insertAtFirstTestInvalid() throws Exception {
         linkedList = TestUtils.populateList(); // by default it will add 3 random node value
-        linkedList.insertAt(TestUtils.randomize(),6);
+        linkedList.insertAt(TestUtils.randomize(
+                TestUtils.DEFAULT_RAND_LENGTH),6);
     }
 
     @Test
@@ -69,7 +63,7 @@ public class SinglyLinkedListTest {
     @Test
     public void removeAtTestValid() throws Exception {
         int INDEX = 2;
-        linkedList = TestUtils.populateList(); // by default it will add 3 random node value
+        linkedList = TestUtils.populateList(); // by default, it will add 3 random node value
         log.info("List of value before removing node at " + INDEX + ": " + linkedList.traverse());
         linkedList.removeAt(INDEX);
         log.info(" Linked of value after removing node at " + INDEX + ": " + linkedList.traverse());

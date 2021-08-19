@@ -48,18 +48,24 @@ After successful build add the following dependency into your Reference Applicat
 > Snapshots will be published to
 > (https://soumyabrata09.jfrog.io/artifactory/sam09-libs-snapshot/com/sam09/lib/cryptography-starter/)
 
-> **stack size can be provided through externilized configuration. add the following property value to application.properties/yaml file**
+> **stack size can be provided through externalized configuration. add the following property value to application.properties/yaml file**
 
 ````
 ds.stack.size=100
-```` 
+````
+
+> **Queue capacity can be provided through externalized configration.**
+````
+#Define capacity of the Queue
+ds.queue.capacity=10
+````
 
 _Action Items_
  - [x] Create a Generic SLF4J logger which can be inject to gereric bean generator and can be used across the project 
  - [x] Onboard the artifact onto Jfrog/Nexus
  - [x] Singly Linked List implemented
  - [x] Doubly Linked List
- - [ ] stack, Queue and Priority Queue
+ - [x] stack, Queue and Priority Queue
  - [ ] Binary Search Tree
  - [ ] Heap
  - [ ] Map
