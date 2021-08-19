@@ -46,7 +46,7 @@ After successful build add the following dependency into your Reference Applicat
 > mvn clean install deploy
 > 
 > Snapshots will be published to
-> (https://soumyabrata09.jfrog.io/artifactory/sam09-libs-snapshot/com/sam09/lib/cryptography-starter/)
+> (https://soumyabrata09.jfrog.io/artifactory/sam09-libs-snapshot/com/sam09/lib/datastructure-starter/)
 
 > **stack size can be provided through externalized configuration. add the following property value to application.properties/yaml file**
 
