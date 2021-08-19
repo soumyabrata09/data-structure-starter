@@ -4,16 +4,15 @@ import com.sam09.lib.datastructurestarter.constants.Traversal;
 import com.sam09.lib.datastructurestarter.utility.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+//@RunWith(SpringJUnit4ClassRunner.class)
 public class DoublyLinkedListTest {
 
     private static final Logger log = LoggerFactory.getLogger(DoublyLinkedListTest.class);

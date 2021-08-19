@@ -3,14 +3,13 @@ package com.sam09.lib.datastructurestarter.services.queues;
 import com.sam09.lib.datastructurestarter.utility.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+//@RunWith(SpringJUnit4ClassRunner.class)
 public class PriorityQueueTest {
 
     private static final Logger log = LoggerFactory.getLogger(PriorityQueueTest.class);
