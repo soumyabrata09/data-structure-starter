@@ -2,6 +2,7 @@
 package com.sam09.lib.datastructurestarter;
 
 import com.sam09.lib.datastructurestarter.services.lists.SinglyList;
+import com.sam09.lib.datastructurestarter.services.queues.Queue;
 import com.sam09.lib.datastructurestarter.services.stack.Stack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +19,8 @@ public class Application implements CommandLineRunner {
     SinglyList singlyList;
 	@Autowired
     Stack stack;
-
+    @Autowired
+    Queue queue;
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
@@ -43,6 +45,8 @@ public class Application implements CommandLineRunner {
 		log.info("List contains: " + singlyList.traverse() + " & size: " + singlyList.sizeOf());
 		log.info("------------------");
 		log.info("Stack Size: " + stack.sizeOf());
+        log.info("------------------");
+        log.info("Queue Capacity: " + queue.capacity());
 	}
 }
 */

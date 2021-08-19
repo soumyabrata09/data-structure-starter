@@ -34,7 +34,7 @@ public class SinglyLinkedList implements SinglyList {
     @Override
     public void insertAt(Object data, int index) throws Exception {
         if (index >= 0 && index < this.size){
-            //create a statring node with null value but a pointer to the HEAD
+            //create a starting node with null value but a pointer to the HEAD
             Node start = new Node(null,this.HEAD);
             //create a before Node which will be the node in front of the new Node that is going to be added at the given position
             Node before = start;

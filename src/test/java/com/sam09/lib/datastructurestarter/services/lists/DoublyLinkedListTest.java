@@ -5,16 +5,15 @@ import com.sam09.lib.datastructurestarter.utility.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@RunWith(JUnit4.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 public class DoublyLinkedListTest {
 
     private static final Logger log = LoggerFactory.getLogger(DoublyLinkedListTest.class);
@@ -84,14 +83,16 @@ public class DoublyLinkedListTest {
         int INDEX = 3;
         linkedList = TestUtils.populateDoublyList(); // by default it populates 4 node data with random value
         log.info("List of value before insertion at " + INDEX + ": " + linkedList.traverse(Traversal.FORWARD));
-        linkedList.insertAt(TestUtils.randomize(),INDEX);
+        linkedList.insertAt(TestUtils.randomize(
+                TestUtils.DEFAULT_RAND_LENGTH),INDEX);
         log.info("List of value after insertion at " + INDEX + ": " + linkedList.traverse(Traversal.FORWARD));
         assertEquals(5,linkedList.sizeOf());
     }
 
     @Test(expected = Exception.class)
     public void insertAtTestInvalid() throws Exception {
-        linkedList.insertAt(TestUtils.randomize(),7);
+        linkedList.insertAt(TestUtils.randomize(
+                TestUtils.DEFAULT_RAND_LENGTH),7);
     }
 
     @Test

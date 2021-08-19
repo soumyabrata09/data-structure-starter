@@ -10,6 +10,7 @@ public class StackAutoConfigurationTest {
 
     AnnotationConfigApplicationContext context;
     String[] Declared_beans = {"sizeBean","stackBean"};
+
     @Before
     public void setUp() throws Exception {
         context = new AnnotationConfigApplicationContext();
