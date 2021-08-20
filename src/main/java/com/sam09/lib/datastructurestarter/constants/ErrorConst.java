@@ -1,5 +1,8 @@
 package com.sam09.lib.datastructurestarter.constants;
 
+/**
+ * @author soumyabrata09
+ */
 public enum ErrorConst {
     OUT_OF_BOUND("INDEX OUT OF BOUND"),
     EMPTY("LIST IS EMPTY"),

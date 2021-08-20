@@ -29,9 +29,6 @@ public class BinaryTreeTest {
 
     @Test
     public void preorderTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        /*Class[] paramType = new Class[1];
-        paramType[0] = TreeNode.class;
-        Method invokingMethod = BinaryTree.class.getMethod("preorder", paramType[0]);*/
         Method invokingMethod = TestUtils.getInvokingMethod(TestUtils.PREORDER, BinaryTree.class,TreeNode.class);
         List<Object> preorderList = bTree.printTraversalByOrder(bTree, invokingMethod, bTree.getRoot());
 
@@ -52,6 +49,7 @@ public class BinaryTreeTest {
     public void postorderTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method invokingMethod = TestUtils.getInvokingMethod(TestUtils.POSTORDER, BinaryTree.class, TreeNode.class);
         List<Object> postorderedList = bTree.printTraversalByOrder(bTree,invokingMethod, bTree.getRoot());
+
         log.info("\nPostorder Traversal-> " + postorderedList);
         assertTrue(!postorderedList.isEmpty());
     }

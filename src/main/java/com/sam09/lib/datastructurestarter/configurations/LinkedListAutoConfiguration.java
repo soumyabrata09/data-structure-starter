@@ -11,10 +11,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+/**
+ * @author soumyabrata09
+ */
 @Configuration(proxyBeanMethods = true)
 @ConditionalOnClass
 public class LinkedListAutoConfiguration {
 
+    /**
+     * @return Returns a bean of type SinglyLinkedList
+     */
     @Bean(name = "singlyList")
     @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
     @ConditionalOnMissingBean
@@ -22,6 +28,9 @@ public class LinkedListAutoConfiguration {
         return new SinglyLinkedList();
     }
 
+    /**
+     * @return Returns a bean of type DoublyLinkedList
+     */
     @Bean(name = "doublyList")
     @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
     @ConditionalOnMissingBean

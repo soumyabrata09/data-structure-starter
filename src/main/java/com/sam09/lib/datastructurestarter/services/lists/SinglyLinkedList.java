@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author soumyabrata09
+ */
 @Service
 public class SinglyLinkedList implements SinglyList {
     private static final Logger log = LoggerFactory.getLogger(SinglyLinkedList.class);
@@ -18,6 +21,9 @@ public class SinglyLinkedList implements SinglyList {
         HEAD = null;
     }
 
+    /**
+     * @param data List data which to be added the HEAD location of the List
+     */
     @Override
     public void prepend(Object data) {
         //create a new node with null pointer
@@ -31,6 +37,11 @@ public class SinglyLinkedList implements SinglyList {
         log.info("Data added to the list successfully");
     }
 
+    /**
+     * @param data List data which to be inserted
+     * @param index Location where data should be inserted at
+     * @throws Exception
+     */
     @Override
     public void insertAt(Object data, int index) throws Exception {
         if (index >= 0 && index < this.size){
@@ -53,6 +64,10 @@ public class SinglyLinkedList implements SinglyList {
         }
     }
 
+    /**
+     * @return Returns removed Node data from the HEAD of the List
+     * @throws Exception
+     */
     @Override
     public Node removeFirst() throws Exception {
         if (null != this.HEAD) {
@@ -69,6 +84,11 @@ public class SinglyLinkedList implements SinglyList {
         }
     }
 
+    /**
+     * @param index Location where Node data should be deleted from
+     * @return Returns the removed Node from the desired location of the List
+     * @throws Exception
+     */
     @Override
     public Node removeAt(int index) throws Exception {
         if(index >=0 && index < this.size){
@@ -94,6 +114,9 @@ public class SinglyLinkedList implements SinglyList {
         }
     }
 
+    /**
+     * @return Returns a List of traversed elements
+     */
     @Override
     public List traverse() {
         List arList = new ArrayList<>();
@@ -105,11 +128,17 @@ public class SinglyLinkedList implements SinglyList {
         return arList;
     }
 
+    /**
+     * @return Retuns the size of the List
+     */
     @Override
     public int sizeOf() {
         return this.size;
     }
 
+    /**
+     * @return Returns the HEAD of the List
+     */
     @Override
     public Node getHead() {
         return this.HEAD;

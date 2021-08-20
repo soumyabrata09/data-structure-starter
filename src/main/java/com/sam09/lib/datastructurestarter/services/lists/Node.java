@@ -1,5 +1,8 @@
 package com.sam09.lib.datastructurestarter.services.lists;
 
+/**
+ * @author soumyabrata09
+ */
 public class Node {
     private Object data;
     private Node next;

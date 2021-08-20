@@ -69,7 +69,7 @@ _Action Items_
  - [x] Singly Linked List implemented
  - [x] Doubly Linked List
  - [x] stack, Queue and Priority Queue
- - [ ] Binary Tree & Binary Search Tree
+ - [x] Binary Tree & Binary Search Tree
  - [ ] Heap
  - [ ] Map
  

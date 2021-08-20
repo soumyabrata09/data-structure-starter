@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author soumyabrata09
+ */
 @Service
 public class DoublyLinkedList implements DoublyList {
     private static final Logger log = LoggerFactory.getLogger(DoublyLinkedList.class);
@@ -22,11 +25,18 @@ public class DoublyLinkedList implements DoublyList {
     }
 
 
+    /**
+     * @return Returns the size of the List
+     */
     @Override
     public int sizeOf() {
         return this.size;
     }
 
+    /**
+     * @param movement Takes Enum value of type either FORWARD or BACKWARD to decide upon traversal type
+     * @return Returns a List of contents traversed
+     */
     @Override
     public List traverse(Traversal movement) {
         List arList = new ArrayList();
@@ -56,6 +66,9 @@ public class DoublyLinkedList implements DoublyList {
         return arList;
     }
 
+    /**
+     * @param data LinkedList data of type Object(Generalized); Adds Data at the start of the List
+     */
     @Override
     public void prepend(Object data) {
         AdvancedNode start = new AdvancedNode(data,null,null);
@@ -70,6 +83,9 @@ public class DoublyLinkedList implements DoublyList {
         size++; //increase the size
     }
 
+    /**
+     * @param data LinkedList data of type Object(Generalized); Adds Data at the end of the List
+     */
     @Override
     public void append(Object data) {
         AdvancedNode last = new AdvancedNode(data,null,null);
@@ -84,6 +100,11 @@ public class DoublyLinkedList implements DoublyList {
         size++; //increase the size
     }
 
+    /**
+     * @param data LinkedList data which to be inserted
+     * @param index location at which data should be inserted
+     * @throws Exception
+     */
     @Override
     public void insertAt(Object data, int index) throws Exception {
         if (index >=0 && index < this.size){
@@ -106,6 +127,10 @@ public class DoublyLinkedList implements DoublyList {
         }
     }
 
+    /**
+     * @return Returns the removed AdvancedNode type from the beginning of the LinkedList
+     * @throws Exception
+     */
     @Override
     public AdvancedNode removeFirst() throws Exception {
         if (null != HEAD){
@@ -123,6 +148,10 @@ public class DoublyLinkedList implements DoublyList {
         }
     }
 
+    /**
+     * @return Returns the removed AdvancedNode type from the trail of the LinkedList
+     * @throws Exception
+     */
     @Override
     public AdvancedNode removeLast() throws Exception {
         if (null != TAIL){
@@ -140,6 +169,11 @@ public class DoublyLinkedList implements DoublyList {
         }
     }
 
+    /**
+     * @param index Location where data should be deleted from
+     * @return Returns removed Data of type AdvancedNode
+     * @throws Exception
+     */
     @Override
     public AdvancedNode removeAt(int index) throws Exception {
         if ( index >=0 && index < this.size){
@@ -166,11 +200,17 @@ public class DoublyLinkedList implements DoublyList {
         }
     }
 
+    /**
+     * @return Returns the HEAD of the List
+     */
     @Override
     public AdvancedNode getHead() {
         return this.HEAD;
     }
 
+    /**
+     * @return Returns the TAIL of the List
+     */
     @Override
     public AdvancedNode getTail() {
         return this.TAIL;

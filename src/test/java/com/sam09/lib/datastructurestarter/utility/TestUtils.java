@@ -12,6 +12,7 @@ import com.sam09.lib.datastructurestarter.services.queues.Queue;
 import com.sam09.lib.datastructurestarter.services.queues.QueueService;
 import com.sam09.lib.datastructurestarter.services.stack.Stack;
 import com.sam09.lib.datastructurestarter.services.stack.StackService;
+import com.sam09.lib.datastructurestarter.services.trees.BinarySearchTree;
 import com.sam09.lib.datastructurestarter.services.trees.BinaryTree;
 import com.sam09.lib.datastructurestarter.services.trees.TreeNode;
 
@@ -152,6 +153,39 @@ public class TestUtils {
         tree.getRoot().getRight().getRight().setLeft(new TreeNode(11));
 
         return tree;
+    }
+
+    /**
+     * @param tree Takes a BinaryTree instance as parameter
+     * @return BinarySearchTree type instance
+     */
+    public static BinarySearchTree populateSampleBSTData(BinarySearchTree tree) {
+        /*Structure:
+
+                    (43)
+                /         \
+              (25)        (53)
+              /   \       /   \
+            (18)  (35)  (49) (69)
+                  /  \      /
+                (30) (41) (61)
+        */
+        tree.setRoot(new TreeNode(43));
+
+        tree.getRoot().setLeft(new TreeNode(25));
+        tree.getRoot().setRight(new TreeNode(53));
+
+        tree.getRoot().getLeft().setLeft(new TreeNode(18));
+        tree.getRoot().getLeft().setRight(new TreeNode(35));
+        tree.getRoot().getLeft().getRight().setLeft(new TreeNode(30));
+        tree.getRoot().getLeft().getRight().setRight(new TreeNode(41));
+
+        tree.getRoot().getRight().setLeft(new TreeNode(49));
+        tree.getRoot().getRight().setRight(new TreeNode(69));
+        tree.getRoot().getRight().getRight().setLeft(new TreeNode(61));
+
+        return tree;
+
     }
 
     /**
