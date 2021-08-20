@@ -1,0 +1,7 @@
+com.sam09.lib.datastructurestarter.configurations
+com.sam09.lib.datastructurestarter.constants
+com.sam09.lib.datastructurestarter.services.lists
+com.sam09.lib.datastructurestarter.services.queues
+com.sam09.lib.datastructurestarter.services.stack
+com.sam09.lib.datastructurestarter.services.trees
+com.sam09.lib.datastructurestarter.utility

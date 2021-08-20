@@ -3,6 +3,9 @@ package com.sam09.lib.datastructurestarter.services.queues;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * @author soumyabrata09
+ */
 public abstract class AbstractPriorityQueue {
     class QueueItem {
         private int key;
@@ -51,10 +54,38 @@ public abstract class AbstractPriorityQueue {
         }
     }
 
+    /**
+     * @return Returns a PriorityQueue Object
+     * @throws Exception
+     */
     abstract public Object popMax() throws Exception;
+
+    /**
+     * @return Returns a PriorityQueue Object
+     * @throws Exception
+     */
     abstract public Object peekMax() throws Exception;
+
+    /**
+     * @param key Priority of the List
+     * @param value Actual value of the List
+     * @return Returns boolean flag
+     * @throws Exception
+     */
     abstract public boolean insert(int key, Object value) throws Exception;
+
+    /**
+     * @return Returns the size of the PriorityQueue
+     */
     abstract public int sizeOf();
+
+    /**
+     * @return Returns the capacity of the PriorotyQueue
+     */
     abstract public int capacity();
+
+    /**
+     * @return It adds the queue elements to ArrayList and returns it
+     */
     abstract public List<QueueItem> printQueue();
 }

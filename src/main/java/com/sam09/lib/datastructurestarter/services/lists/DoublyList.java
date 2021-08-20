@@ -4,6 +4,9 @@ import com.sam09.lib.datastructurestarter.constants.Traversal;
 
 import java.util.List;
 
+/**
+ * @author soumyabrata09
+ */
 public interface DoublyList {
     int sizeOf();
     List traverse(Traversal movement);

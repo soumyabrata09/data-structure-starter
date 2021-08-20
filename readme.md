@@ -60,13 +60,16 @@ ds.stack.size=100
 ds.queue.capacity=10
 ````
 
+**See Also `How to pass a function as a parameter in java`**
+> [see the article here](https://www.delftstack.com/howto/java/how-to-pass-a-function-as-a-parameter-in-java/)
+
 _Action Items_
- - [x] Create a Generic SLF4J logger which can be inject to gereric bean generator and can be used across the project 
+ - [x] Create a Generic SLF4J logger which can be injected to gereric bean generator and can be used across the project 
  - [x] Onboard the artifact onto Jfrog/Nexus
  - [x] Singly Linked List implemented
  - [x] Doubly Linked List
  - [x] stack, Queue and Priority Queue
- - [ ] Binary Search Tree
+ - [x] Binary Tree & Binary Search Tree
  - [ ] Heap
  - [ ] Map
  
